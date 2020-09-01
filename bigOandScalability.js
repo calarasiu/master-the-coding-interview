@@ -25,4 +25,5 @@ function firstTwo(arr){
   console.log(arr[1]);
 
   // the function will print the first 2 elements only, no matter the total number of elements of the input array - this means it has a constant time of execution - O(1)
+  // the time of execution will remain 0(1) - even though the function will have to print the first 10 or 100 elements - just because the implementation of the function is independent of the number of the input elements - is predictable 
 }
