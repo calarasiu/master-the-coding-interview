@@ -20,3 +20,9 @@ function findNemo(array){
 
 findNemo(large);
 
+function firstTwo(arr){
+  console.log(arr[0]);
+  console.log(arr[1]);
+
+  // the function will print the first 2 elements only, no matter the total number of elements of the input array - this means it has a constant time of execution - O(1)
+}
