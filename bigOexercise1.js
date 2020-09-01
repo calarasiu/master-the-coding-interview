@@ -11,4 +11,5 @@ function funChallenge(input){
   return a; // O(1)
 }
 
-Big O(3 + 4n) = O(n) 
+Big O(3 + 4n) = O(n) // because we are trying to take into account just the variations caused by the size of the input not the constants 
+
