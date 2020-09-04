@@ -52,8 +52,8 @@ O(n^2)
 const boxes = [1,2,3,4];
 
 function couples(boxes){
-  arr.forEach(function(box1){
-    arr.forEach(function(box2){
+  boxes.forEach(function(box1){
+    boxes.forEach(function(box2){
       console.log(box1, box2);
     })
   })
