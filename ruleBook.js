@@ -83,3 +83,4 @@ function couples(boxes){
 Big O = (n + n^2) if the input will grow really big, the most significant growth will be noticed by n^2 => Big O = (n^2)
 
 // never nest 3 levels O(n^3), as the algorithmic efficiency will be really bad and for sure is a better solution 
+//  check BigOCheatSheet => prep interview
