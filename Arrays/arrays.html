@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrays</title>
+</head>
+<body>
+  <h1>Array is the data structure that has the smallest footprint</h1>
+  <p>if all you need is to store some data and iterate through it - array is the way to go </p>
+  <h2>Type </h2>
+  <ul>
+    <li>Static arrays you need to know from the declaration how much space it will take</li>
+    <li>Dynamic arrays - the type of arrays used by the high level languages - 
+      <ul>
+        <li>you don't need to worry about the space to allocate in memory as the system will take care of it</li> 
+        <li>sometimes adding element to this arrays will cost you O(n) time as the arrays needs to be copied at another location in memory to be able to fit the extra element</li>
+      </ul>
+     </li>
+  </ul>
+  <h2>Big O for the most common operations</h2>
+  <ul>
+    <li>Lookup - O(1) - constant time - if we have the index of the item</li>
+    <li>Push - O(1) - just adds an element at the end of the array</li>
+    <li>Pop - O(1) - deletes an element from the end </li>
+    <li>Unshift - (O(n)) - adds an element at the beginning of the array  => it needs to shift the indexes for all the items of the array</li>
+    <li>Splice(startPoint, nItemsToDelete, eToAdd) - (O(n)) - worst case scenario - it needs to shift indexes, same principle as Unshift</li>
+  </ul>
+
+  <h1>Build an array</h1>
+    <p>single responsibility practices - each function performs 1 operation only</p>
+    <p>methods are functions within a class</p>
+    
+</body>
+</html>

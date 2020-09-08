@@ -1,0 +1,27 @@
+<h1>Reference type </h1>
+<ul>
+  <li>[] === [] => false</li>
+  <li>[1] === [1] => false</li>
+  <p>because arrays are objects and each array is a different box(data structure) </p>
+  <li>const arr1 = [1]</li>
+  <li>const arr2 = arr1</li>
+  <p>arr1 === arr2 - true - both reference to the same box</p>
+  <li>arr3 = [1]</li>
+  <li>arr3 === arr1 - false - there are 2 different boxes - although the content is the same</li>
+</ul>
+
+<h1>Context vs scope</h1>
+<p>Scope</p>
+  <ul>
+    <li>function b() {</li>
+    <li>const a = 13;}</li>
+    <li>console.log(a); => a is not defined - because it only exists inside the function</li> 
+  </ul>
+  <p>Context</p>
+  <ul>
+    <li>const c = { b: function(){ console.log(this)} - this returns the context/ object inside whom it is = object c</li>
+  </ul>
+
+  <h1>Instantiation - the process of doing many copies of an object using classes </h1>
+  <img src="../images/classes.jpg">
+
