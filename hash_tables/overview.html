@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hash tables</title>
+</head>
+<body>
+  <h1>In js the hash tables are represented by the Objects</h1>
+  <h2>Has function - it takes care of the input when you want to store it in memory or look for it (O(1) -  time c</h2>
+  <p>for the same input always generates the same key - useful in cryptography</p>
+  <p>question - can we store the same key with a diff value? </p>
+  <h5>Hash function are really useful because ,opposite to arrays, have a lookup/ insertion/ erasing time of O(1) </h5>
+  <p>exception - collisions - when multiple elements are inserted in the same memory spot - the lookups time becomes O(n)</p>
+  <p><a href="https://www.cs.usfca.edu/~galles/visualization/OpenHash.html">visualization of memory allocation</a></p>
+  <p><a href="https://en.wikipedia.org/wiki/Hash_table">more about how to deal with collisions</a></p>
+  <h5>In js the types of keys in an object can be only string</h5>
+  <p>In order to overcome this limitation in ES6 were introduced <span style="color: red;">the maps</span> that are a typeof hashes that </p>
+  <ul>
+    <li> allow to have any type of keys -arrays, function ...</li>
+    <li> follow an order when storing the elements</li>
+  </ul>
+  <p>Another type of hashes in js are the <span style="color: red;">Set</span> - that only stores the keys</p>
+  <h5>discover how hashes work under the hood - open the code to discover the script tags</h5>
+  <script>
+    class HashTable {
+  constructor(size){
+    this.data = new Array(size);
+    // this.data = [];
+  }
+  // private method is marked with _
+  // this method generates the memory place where the key is going to be stored 
+  _hash(key) {
+    let hash = 0;
+    for (let i =0; i < key.length; i++){
+        hash = (hash + key.charCodeAt(i) * i) % this.data.length // use the % to avoid exceeding the HashTable size
+    }
+    return hash;
+  }
+  // store the key value pair
+  set(key, value) {
+    let address = this._hash(key);
+    if (!this.data[address]) {
+      this.data[address] = [];
+    }
+    this.data[address].push([key, value]);
+    return this.data;
+  }
+
+  // 
+  get(key){
+    const address = this._hash(key);
+    const currentBucket = this.data[address]
+    if (currentBucket) {
+      for(let i = 0; i < currentBucket.length; i++){
+        if(currentBucket[i][0] === key) {
+          return currentBucket[i][1]
+        }
+      }
+    }
+    return undefined;
+  }
+  
+  // get all the keys from the hash table
+  keys(){
+    const keysArray = [];
+    console.log(this.data.length);
+    for (let i = 0; i < this.data.length; i++){
+      if(this.data[i]){
+        keysArray.push(this.data[i][0][0])
+      }
+    }
+    return keysArray;
+  }
+}
+
+const myHashTable = new HashTable(50);
+myHashTable.set('grapes', 10000)
+myHashTable.set('grapes', 10000)
+myHashTable.get('grapes')
+myHashTable.set('apples', 9)
+myHashTable.get('apples')
+myHashTable.keys()
+
+    // get the keys with collision
+    keys() {
+    if (!this.data.length) {
+      return undefined
+    }
+    let result = []
+    // loop through all the elements
+    for (let i = 0; i < this.data.length; i++) {
+        // if it's not an empty memory cell
+        if (this.data[i] && this.data[i].length) {
+          // but also loop through all the potential collisions
+          if (this.data.length > 1) {
+            for (let j = 0; j < this.data[i].length; j++) {
+              result.push(this.data[i][j][0])
+            }
+          } else {
+            result.push(this.data[i][0])
+          } 
+        }
+    }
+    return result; 
+  }
+  </script>
+</body>
+</html>
