@@ -7,12 +7,20 @@
 <body>
   <h1>In js the hash tables are represented by the Objects</h1>
   <h2>Has function - it takes care of the input when you want to store it in memory or look for it (O(1) -  time c</h2>
-  <p>for the same input always generates the same key - useful in cryptography</p>
-  <p>question - can we store the same key with a diff value? </p>
+  <img src="../images/hashFunction.jpg" alt="">
+  <ul>
+    <li>
+  <p>for the same input always generates the same key - useful in cryptography - <a href="https://www.md5hashgenerator.com/">MD5 hash generator</a></p>
+  <p>question - can we store the same key with a diff value? - Yes - collisions</p>
+</li>
+<li><p><a href="https://www.cs.usfca.edu/~galles/visualization/OpenHash.html">visualization of memory allocation</a></p></li>
+</ul>
   <h5>Hash function are really useful because ,opposite to arrays, have a lookup/ insertion/ erasing time of O(1) </h5>
-  <p>exception - collisions - when multiple elements are inserted in the same memory spot - the lookups time becomes O(n)</p>
-  <p><a href="https://www.cs.usfca.edu/~galles/visualization/OpenHash.html">visualization of memory allocation</a></p>
+  <ul>
+    <li><p>exception - collisions - when multiple elements are inserted in the same memory spot - the lookups time becomes O(n)</p></li>
+  <li><p>hashes are the way to go to reduce the time complexity</p></li>
   <p><a href="https://en.wikipedia.org/wiki/Hash_table">more about how to deal with collisions</a></p>
+  </ul>
   <h5>In js the types of keys in an object can be only string</h5>
   <p>In order to overcome this limitation in ES6 were introduced <span style="color: red;">the maps</span> that are a typeof hashes that </p>
   <ul>
@@ -20,7 +28,7 @@
     <li> follow an order when storing the elements</li>
   </ul>
   <h5>Pros and cons of Hash tables</h5>
-  <img src="" alt="">
+  <img src="../images/hashesProsCons.jpg" alt="">
   <p>Another type of hashes in js are the <span style="color: red;">Set</span> - that only stores the keys</p>
   <h5>discover how hashes work underneath the hood - open the code to discover the script tags</h5>
   <script>
