@@ -18,5 +18,17 @@
   <p>if 2 pointers reference to the same shelf in memory, even though one of them is deleted, the memory will still hold the content, until is not referenced anymore, and the garbage can be collected - the 2 pointer is deleted or points to another shelf  - this happens only for languages that have the memory managed automatically - garbage collected - not for low level languages where you have to manage your memory manually </p></li>
   </ul>
 
+  <h1>Double linked lists</h1>
+  <img src="../images/doubleLinkedLists.jpg" alt="">
+  <ul>
+    <li>each node stores a pointer to the previous node and to the next one</li>
+  </ul>
+  <h2>single vs double linked lists</h2>
+  <ul>
+    <li>the single ones need less memory = > the operations(remove,insert) are faster
+      <p>to be used when memory is limited and we need to do a lot of insertions and deletions, but less traversions(lookups)</p>
+    </li>
+    <li>the double linked lists are easy to traverse from the head or the tail - it gives access to the previous and next node <p>are the way to go when the memory is not limited and </p></li>
+  </ul>
 </body>
 </html>
