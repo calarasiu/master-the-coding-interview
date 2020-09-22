@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacks and Queues</title>
+</head>
+<body>
+  <h1>Stacks and queues</h1>
+  <ul>
+    <li>linear data structures - go through the data sequentially - one by one - only 1 element can be directly reached</li>
+    <li>the difference between the 2 is how item are deleted</li>
+    <li>ideal for operations on the beginning or the end of the data structures - pop, push</li>
+    <li>are build on top of arrays and linked lists - with limited operations that can be performed on them </li>
+  </ul>
+
+  <h2>Stacks - think of it like a pile of plates</h2>
+    <ul>
+      <li>the way to access data is to start from the last one to the first - LIFO - last in first out </li>
+      <li>important in language specific engines - browser history, undo function - the last one appears first</li>
+      <li>most important stack methods (O(1) time complexity)<p>- pop - remove the last item</p>
+          <p>-push - add am item at the end </p>
+          <p>- peek - view the last item of the stack </p></li>
+      <li>when building a stack we can use both arrays and linked lists - but we need to think at pros and cons before deciding : <p>the arrays are cache friendly bc the items are stored sequentially</p>
+      <p>arrays can have expensive appends if there is no more space and it needs to be copied in a bigger space in memory</p></li>
+    </ul> 
+
+  <h2>Queues - think of it like a normal queue for a restaurant reservation</h2>
+  <ul>
+    <li>FIFO - first in first out</li>
+    <li>used, for example to implement the order to assign the uber for the customers- the first to ask will receive the first free car</li>
+    <li>most important build in methods (O(1) time complexity)<p>enqueue (push)</p>
+    <p>dequeue (like pop) - will remove from the first item </p>
+  <p>peek - view the first item in the queue</p></li>
+  <p>to implement a queue we don't want to use arrays as we would need to change the indexes for each dequeue</p>
+  <p></p>
+  </ul>
+  <h2>How does js works </h2>
+  <p>Js is a single thread language (it has only 1 call stack and it executes one event at a time) that can be non blocking - synchronous execution </p>
+  <p>With single stack languages the stack can be overflowed - with recursions for example (when a function call itself) - we will have a infinite loop </p>
+  <p>Non blocking - asynchronous - setting a setTimeOut for a function before getting executed - it will pass the function to the js api -> after the time set is done, the function will be passed to the callback queue that will pass it back to the stack when the event loop will determine that the stack is empty and ready to receive a new item</p>
+  <img src="../images/js_runtime_env.jpg" alt="">
+  <p>think of synchronous and asynchronous like the difference between a phone call and respectively a text message to ask for something</p>
+  <ul>
+    <li>phone call -you are stack at the phone until the receiver wil answer your call</li>
+    <li>the text message will allow you to carry on your activities until you are free to check the message received back from your interlocutor</li>
+  </ul>
+  <p>Js engine is composed of the </p>
+    <ul><li>memory heap - the variables are stored </li>
+      <li>call stack - takes care of the execution of the functions (1 at a time)  - LIFO - last in first out </li>
+    </ul>  
+</body>
+</html>
