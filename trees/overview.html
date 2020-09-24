@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trees</title>
+</head>
+<body>
+  <h1>Trees</h1>
+  <img src="../images/trees.jpg" alt="">
+  <ul>
+    <li><p>Linked lists are a type of trees - single linked lists - just the parent will point to the child, not the other way around</p></li>
+    <li>the structure of html is organized like a tree doc -> head -> title</li>
+  </ul>
+
+  <h2>Different types of trees</h2>
+  <ul>
+    <li>Binary trees 
+      <ul><li>each node can have max 2 children</li>
+      <li>each child can have just 1 parent</li>
+    <li>in a perfect binary tree each node has either 2 or 0 children - has no gaps
+      <ul>
+        <li>the number of nodes doubles on each level => is easy to check how many nodes we have on each level -> level n ^ 2</li>
+        <li> to calculate the total number of nodes is also easy = 2^height -1 => log nodes = height (the number of steps we need to do to make a decision - divide and conquer - the phone book search) => (explanation of log => log 100 = 2 because 10^2 = 100)</li>
+        <li>O(log n) time complexity is a lot faster than O(n) - we don't need to pass through each node - is what Google uses for its search algorithm</li>
+      <li>the number of nodes on the last level is = with the sum of the nodes above it + 1 => half of the data is on the last level</li>
+      </ul>
+    </li>
+  <li>a full binary tree has gaps - the bottom can still be completed </li>
+  <br>
+<li><img src="../images/perfect_full_Btree.jpg" alt=""></li></ul>
+    </li>
+  </ul>
+
+  <h2>Binary search tree</h2>
+  <ul>
+    <li>all the nodes on the right are bigger than the parent node - on the left decreases => easy to decide which way to go when looking for a node </li>
+    <li>each node has max 2 children nodes</li>
+    <li><a href="https://visualgo.net/en/bst">VisualAlgo</a></li>
+    <li><img src="../images/binarySearch.jpg" alt=""></li>
+    <li>balanced vs unbalanced binary search trees - for the 2 one all the nodes are on one side and the tree becomes a linked list - and the operations to perform on it cost O(n) as we need to go through all the nodes since there are no bifurcations</li>
+    <li>pros and cons of Binary search trees, WHEN BALANCED 
+      <img src="../images/binarySearchProsCons.jpg" alt="">
+    </li>
+  </ul>
+
+</body>
+</html>

@@ -22,6 +22,7 @@ class Stack{
       this.top = newNode;
       this.bottom = newNode;
     }else{
+      // newNode -> topNode
       let holdingPointer = this.top;
       this.top = newNode;
       this.top.next = holdingPointer;

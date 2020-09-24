@@ -23,9 +23,11 @@ class Queue{
       this.first = newNode;
       this.last = newNode;
     }else{
-      const holdingPointer = this.last;
+      // newNode <- last node
+      // make the last item point to the new node
+      this.last.next = newNode;
+      // declare the new node as the last node
       this.last = newNode;
-      this.last.next = holdingPointer;
     }
     this.length++;
     return this;
@@ -34,8 +36,12 @@ class Queue{
   dequeue{
     if(!this.first){
       return null
-    }else{
-
+    }else if(this.first === this.last){
+      this.last = null;
+    } else{
+      this.first = this.first.next;
     }
+    this.length--;
+    return this;
   }
 }
