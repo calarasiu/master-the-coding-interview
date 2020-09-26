@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphs</title>
+</head>
+<body>
+  <h1>Graphs</h1>
+  <ul>
+    <li>A set of values connected in a pair wise fashion - each node/ vertex is connected to other nodes through a so called edge</li>
+    <li>used to represent connections - think of maps for example - amazon uses it for their recommendation engines/ g maps to detect the shortest path to your destination </li>
+    <li>trees/linked lists are graphs</li>
+    <img src="../images/graphs.jpg" alt="">
+    <li><h3>Graphs properties</h3></li>
+    <li>1 a) directed graphs - -> / <- / <-> graphs whose edges have a direction one way or double direction - twitter uses directed graphs for the connections as you can follow someone but the followed person doesn't has to follow you back -> to pay attention when this are cyclic or acyclic graphs</li>
+    <li>1 b) undirected graphs - 0-0-0 - graphs that have just double direction edges - facebook uses it for the friendship connections - is mutual - the person you are firend with needs to be friend with you as well </li>
+    <li>2 a) weighted graphs - have information on the edges not just on nodes - for example the distance between 2 nodes</li>
+    <li>2 b) unweighted graph - hold info just in their nodes </li>
+    <li>3 a) cyclic graphs - the nodes are connected in a circular fashion - you have the possibility to go back to the start point(it doesn't need to be cyclic the whole graph but at least 3 nodes ) - maps</li>
+    <li>3 b) acyclic graphs - you cannot go back to the starting point -> goes in one direction - </li>
+    <li>DAG - directed acyclic graph - used by ioda blockchain website</li>
+    <li><a href="https://neo4j.com/blog/graph-algorithms-neo4j-graph-algorithm-concepts/">Graph concepts</a></li>
+  </ul>
+
+  <h2>Different ways of creating graphs?</h2>
+  <ul>
+    <li>Edge list -> const graph = [[0,2], [2,3], [2,1], [1,3]]</li>
+    <li>Adjacent list - the index is the value of the node(when the value is a number that can be used as index) or using the keys of an object and the values are the nodes neighbors</li>
+    <li>Adjacent matrix - true(1/ the value for the weighted graphs)/ false(0) to confirm or deny the connection between nodes </li>
+    <img src="../images/graphsImplementation.jpg" alt="">
+    <a href="https://visualgo.net/en/graphds">Visualgo graphs</a>
+
+  </ul>
+</body>
+</html>
