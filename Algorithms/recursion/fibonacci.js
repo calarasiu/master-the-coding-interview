@@ -1,4 +1,4 @@
-function fibonacciIterative(n){
+function fibonacciIterative(n){   //O(n)
   const results = [];
   while(results.length<=n){
     if(results.length === 0){
@@ -19,7 +19,7 @@ function fibonacciIterative(n){
 
 // console.log(fibonacciIterative(8));
 
-function fibRecursive(n){
+function fibRecursive(n){     //O(2^n - exponential time)
   debugger
       if(n<2){
       return 1;
