@@ -11,7 +11,7 @@
     <li>in js the elements are first being transformed in strings and then sorted by unicode characters - check the unicode table   (2 = 50)
       <p>to make sure the sort method works the way you expect it to add the function description to it ->function(a, b){a-b/ b-a/ a.localeSort(b)</p>
     </li>
-    <li>in js the implementation of the methods is also dependent on the js engines used by different browsers - so the chrome one can differ from the firefox one</li>
+    <li>in js the implementation of the methods is also dependent on the js engines used by different browsers - so the chrome one(merge sort and insertion sort for small amount of data ) can differ from the firefox one(quick sort)</li>
     <li>there are many sorting algorithms and each of them are efficient for solving different sorting problems - check <a href="https://www.toptal.com/developers/sorting-algorithms">check sorting alg in action</a></li>
   </ol>
   <h1><a href="https://www.youtube.com/channel/UCIqiLefbVHsOAXDAxQJH7Xw">Sorting dances</a></h1>
@@ -40,10 +40,34 @@
   <p>Insertion sort - is the best choice when the input is small and almost sorted</p>
   <p>Bubble sort & selection sort - never used - Time complexity O(n^2)</p>
   <p>Merge sort - good time complexity - O(n log n) - bad space complexity O(n)</p>
-  <p>Quicksort - the most popular - best case Time complexity O(n log n)/ worst O(n^2) - space complexity - best case - O(log n)/ worst case O(n) - is not a stable algorithm( the equal input can be in different places in the output)</p>
+  <p>Quicksort - the most popular - best case Time complexity O(n log n)/ worst O(n^2) - space complexity - best case - O(log n)/ worst case O(n) - is not a stable algorithm( it gives the same  results in order if 2 item are the same )</p>
 
   <h2>Non comparison sort - only works for numbers and small inputs</h2>
   <p>Counting sort</p>
   <p>Redix sort </p>
+  <img src="../../images/sortingAlgorithms.jpg" alt="">
+  <p>Exercise - choose which sorting algorithm to use in order to solve this problems - most developers will never code from scratch a sorting algorithm but for sure will need to use the knowledge to make the best decisions in this type of problems</p>
+  <h6>Sort 10 schools around your house by distance:</h6>
+  <p>insertion sort</p>
+
+  <h6>#2 - eBay sorts listings by the current Bid amount:</h6>
+  <p>radix or counting sort</p>
+
+  <h6>#3 - Sort scores on ESPN</h6>
+  <p>Quick sort</p>
+
+  <h6>#4 - Massive database (can't fit all into memory) needs to sort through past year's user data</h6>
+  <p>Merge Sort - I am not choosing the quick sort in order to avoid the worst case scenario O(n^2) - I am worried about the performance as the data is big </p>
+
+  <h6>#5 - Almost sorted Udemy review data needs to update and add 2 new reviews</h6>
+  <p>Insertion Sort</p>
+  <h6>#6 - Temperature Records for the past 50 years in Canada</h6>
+  <p>radix or counting Sort - Quick sort if decimal places (as the non comparison algorithms are not good for precision calculations)</p>
+
+
+  <h6>#7 - Large user name database needs to be sorted. Data is very random.</h6>
+  <p>Quick sort - if the memory is expensive and I am not worried about the worst case of quick sort</p>
+  <h6>#8 - You want to teach sorting</h6>
+  <p>Bubble sort or selection sort</p>
 </body>
 </html>
